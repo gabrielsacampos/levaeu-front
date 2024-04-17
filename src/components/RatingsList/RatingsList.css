@@ -1,0 +1,244 @@
+body{ 
+
+    box-sizing: border-box;
+}
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: #eef2ff;  
+    }
+    100% {
+      background-color: #c7d2fe;  
+    }
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.ratings-list-root{
+    margin-left: 0;
+}
+.skeleton{
+    display: flex;
+    opacity: 0.5;
+    border-radius: 10px;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.list-root.skeleton{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.list-item-skeleton{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.first-box-skeleton{
+    margin-left: 20px;
+   display: flex;
+   gap: 10px;
+}
+
+.avatar-skeleton{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: var(--slate-300);
+
+}
+
+.user-name-skeleton{
+    margin-top: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: var(--slate-300);
+    border-radius: 10px;
+}
+
+.timestamp-skeleton{
+    margin-top: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: var(--slate-300);
+    border-radius: 10px;
+}
+
+.review-box-skeleton{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-row-skeleton{
+    width: 100%;
+    height: 10px;
+    background-color: var(--slate-300);
+    border-radius: 10px;
+}
+
+.last-box-skeleton{
+    width: 100px;
+    padding: 50px;
+}
+
+.heart-skeleton{
+    width: 10px;
+    height: 10px;
+    background-color: var(--slate-300);
+    border-radius: 100%;
+}
+
+.ratings-container{
+    height: 100hv;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+
+.ratings-list-root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+.ratings-list-item {
+    will-change: transform, box-shadow;
+    width: 100%;
+    backdrop-filter: blur(60px);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s, box-shadow 0.5s, margin 0.5s;
+    box-shadow: 2px 2px var(--slate-300);
+}
+
+.ratings-list-item:hover {
+    box-shadow: 4px 4px #c7d2fe;
+    z-index: 1;
+    transform: scale(1.02);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rating-list-item-review{
+    color: #4f46e5;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+.avatar-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+.avatar-left {
+    margin-top: -20px;
+    outline: 2px solid var(--slate-500);
+    box-shadow: 4px 4px var(--slate-500);
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.like-button{
+    will-change: transform;
+    transition: transform 0.5s;
+    self-align: center;
+}
+
+.like-button:hover{
+    transform: scale(1.2);
+    color: var(--primary-color);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+
+.avatar-rigth {
+    margin-left: -20px;
+    margin-bottom: -30px;
+    outline: 2px solid var(--slate-500);
+    box-shadow: 4px 4px var(--slate-500);
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.rating-user-box-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-list-user-name{
+    color: var(--slate-500);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.rating-timestamp {
+    margin-top: -10px;
+    font-style: italic;
+    font-size: 10px;
+    color: var(--slate-500);
+}
+
+.review-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+
+}
+
+.footer-info{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--slate-500);
+    font-style: italic;
+    font-size: 12px;
+}
+

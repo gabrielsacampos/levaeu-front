@@ -1,0 +1,434 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/bolt.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/spinner-two.css');
+
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: #eef2ff;  
+    }
+    100% {
+      background-color: #c7d2fe;  
+    }
+}
+
+@keyframes modalFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);  
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.skeleton{
+    margin-top: 20px;
+    opacity: 0.5;
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+
+.call-to-rating-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.call-to-review-button{
+        appearance: button;
+        background-color: var(--slate-500);
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        box-sizing: border-box;
+        color: var(--lime-100);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: .8px;
+        line-height: 20px;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 13px 19px;
+        text-align: center;
+        text-transform: uppercase;
+        touch-action: manipulation;
+        transform: translateZ(0);
+        transition: filter .2s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+       }
+       
+.call-to-review-button:after {
+        background-clip: padding-box;
+        background-color: #a5b4fc;
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        bottom: -4px;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+       }
+       
+.call-to-review-button:main, .call-to-review-button:focus {
+    user-select: auto;
+}
+       
+.call-to-review-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+       
+.call-to-review-button:disabled {
+    cursor: auto;
+}
+       
+.call-to-review-button:active:after {
+    border-width: 0 0 0px;
+}
+       
+.call-to-review-button:active {
+    padding-bottom: 10px;
+}
+
+
+.taken-icon{
+    width: 80px;
+}
+
+
+
+.users-ranking-container{
+    border-radius: 10px;
+    background-color: var(--slate-50);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ranking-avatar{
+    decoration: none;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+dialog {
+    position: fixed;
+    top: 80%;
+    left: 30%;
+    translate: -50% -50%;
+    background: transparent;
+    z-index: 10;
+    border-radius: 16px;
+    border: none;
+    animation: modalFadeIn 0.5s ease-out;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .form {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 20px;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+  
+  .title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .select{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+
+  .input  {
+    width: 250px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+}
+  
+.input:focus {
+    border: 2px solid var(--input-focus);
+  }
+  
+
+  
+  .button-confirm {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: #bbf7d0;
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+  
+  .cancel{
+    background-color:#d1d5db;
+  }
+
+  
+.rating-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+span {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+  
+.rate i, .rate i:hover ~ i {
+    font-size: 20px;
+    color: #222;
+    text-shadow: none;
+    transition: color 200ms, text-shadow 200ms;
+    transition-delay: 0;
+}
+
+.rate.selected i, .rate.selected i:hover ~ i {
+    color: #fc0;
+    text-shadow: #fc0 0 0 20px;
+}
+
+
+
+.rate:hover i {
+      color: #fc0;
+      text-shadow: #fc0 0 0 20px;
+    }
+    
+    .rate:hover i:nth-child(2) {
+      transition-delay: 30ms;
+    }
+    
+    .rate:hover i:nth-child(3) {
+      transition-delay: 60ms;
+    }
+    
+    .rate:hover i:nth-child(4) {
+      transition-delay: 90ms;
+    }
+    
+    .rate:hover i:nth-child(5) {
+      transition-delay: 120ms;
+    }
+    
+    .rate i {
+      cursor: pointer;
+      font-style: normal;
+    }
+    
+    
+    .form-footer{
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    
+    .gg-bolt.selected-bolt{
+        border-bottom:  #fc0;
+        border-top:  #fc0;
+        color: #fc0;
+    }
+
+
+    .missing-stars-error{
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      font-size: 12px;
+    }
+
+    .missing-stars-error i{
+        margin-top: 10px;
+        font-size:30px;
+    }
+
+    .input.missing {
+      border: 2px solid red;
+    }
+    .select.missing {
+      border: 2px solid red;
+    }
+
+    .load{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.5;
+    }
+
+
+    
+#snackbar {
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px;
+  background-color: var(--lime-100); 
+  color: #6366f1; 
+  text-align: center;
+  border-radius: 5px; 
+  box-shadow: 2px 2px 2px #6366f1;
+  padding: 16px; 
+  position: fixed;
+  z-index: 50;
+  left: 50%; 
+  bottom: 30px; 
+}
+
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.radio-message{
+  border-radius: 100%;
+  margin-top: -40px;
+  margin-left: -40px;
+  width: 80px;
+}
+
+
+#snackbar-error {
+  height: 30px;
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px;
+  background-color: #fee2e2; 
+  color: #6366f1; 
+  text-align: center;
+  border-radius: 5px; 
+  box-shadow: 2px 2px 2px #6366f1;
+  padding: 16px; 
+  position: fixed;
+  z-index: 50;
+  left: 50%; 
+  bottom: 30px; 
+}
+
+
+#snackbar-error.show-error {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.radio-message.error{
+  width: 60px;
+  background-color: #fef2f2;
+}

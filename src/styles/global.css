@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+:root {
+    font-family: 'Comfortaa';
+    --primary-color: #B2FF77;
+    --slate-50: #F8FAFC;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --lime-100: #ecfccb;
+    --cyan-100: #cffafe;
+    box-sizing: border-box;
+}
+
+
+
+body  {
+
+    
+    background: rgb(148,233,223);
+    background: radial-gradient(circle, rgba(148,233,223,0.9206276260504201) 0%, rgba(207,174,238,0.6629245448179272) 100%);
+  }
+  
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    padding-left: 30%;
+}
+
+.page-content {
+    width: 80%;
+}
+
+
